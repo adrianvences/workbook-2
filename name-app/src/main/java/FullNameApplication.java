@@ -16,16 +16,10 @@ public class FullNameApplication {
         // scanner
         inputScanner = new Scanner(System.in);
 
-
         String firstName = promptMethod("Enter your first name: ");
-
         String lastName = promptMethod("Enter your last name: ");
-
         String middleName = promptMethod("Enter your middle name (leave blank if none) : ");
-
         String suffix = promptMethod("Enter your suffix name leave blank if none) : ");
-
-
 
         // class     // var declaration // new instance of string builder
         StringBuilder fullName = new StringBuilder();
