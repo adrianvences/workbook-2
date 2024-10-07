@@ -10,6 +10,7 @@ package neighborhoodLibraryApp;
 
 
 public class Book {
+    // instance variables to hold properties
     private int id;
     private String isbn;
     private String title;
@@ -17,6 +18,7 @@ public class Book {
     private String checkedOutTo;
 
     public Book(int id, String isbn, String title, boolean isCheckedOut, String checkedOutTo) {
+        // constructor to initialize new Book objects
         this.id = id;
         this.isbn = isbn;
         this.title = title;
@@ -24,7 +26,9 @@ public class Book {
         this.checkedOutTo = checkedOutTo;
     }
 
+// method to create and return list of books
     public static Book[] bookList() {
+
         Book[] books = new Book[20];
         books[0] = new Book(1, "978-3-16-148410-0", "The Great Gatsby", false, null);
         books[1] = new Book(2, "978-1-56619-909-4", "Moby Dick", true, "Alice Johnson");
@@ -47,10 +51,10 @@ public class Book {
         books[18] = new Book(19, "978-0-15-101026-4", "The Kite Runner", false, null);
         books[19] = new Book(20, "978-0-7432-7356-5", "Wuthering Heights", true, "Mary Green");
 
-        return books;
+        return books; // returns books
     }
 
-
+// get and set methods
     public int getId() {
         return id;
     }
@@ -89,6 +93,12 @@ public class Book {
 
     public void setCheckedOutTo(String checkedOutTo) {
         this.checkedOutTo = checkedOutTo;
+    }
+
+    //method to check out book with specific user (name)
+    public void checkOutBook(String name) {
+        this.isCheckedOut = true;
+        this.setCheckedOutTo(name);
     }
 
 
